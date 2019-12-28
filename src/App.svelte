@@ -1,20 +1,10 @@
 <script>
+    import Head from './Head.svelte';
 	export let name;
 </script>
 
 <html lang="en">
-	<head>
-		<meta charset='utf-8'>
-		<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-		<title>Svelte app</title>
-
-		<link rel='icon' type='image/png' href='/favicon.png'>
-		<link rel='stylesheet' href='/global.css'>
-		<link rel='stylesheet' href='/build/bundle.css'>
-
-		<script defer src='/build/bundle.js'></script>
-	</head>
+	<Head />
 	<body class="hot">
 	<main>
 		<h1>Hello {name}!</h1>
