@@ -10,7 +10,7 @@
 	];
 
 	const shell = [
-		"client/index.e8125902.js",
+		"about.js",
 	];
 
 	const ASSETS = `cache${timestamp}`;
