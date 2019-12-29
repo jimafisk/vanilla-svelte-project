@@ -10,7 +10,7 @@
 	];
 
 	const shell = [
-		"about.js",
+		"build/about.js",
 	];
 
 	const ASSETS = `cache${timestamp}`;

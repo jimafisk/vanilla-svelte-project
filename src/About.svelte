@@ -1,7 +1,6 @@
 <script>
     import Head from './Head.svelte';
     import Nav from './Nav.svelte';
-	export let name;
 </script>
 
 <html lang="en">
@@ -9,7 +8,7 @@
 	<body class="hot">
 	<Nav />
 	<main>
-		<h1>About!</h1>
+		<h1>About Svelte Component!</h1>
 	</main>
 	</body>
 </html>
@@ -33,9 +32,5 @@
 		main {
 			max-width: none;
 		}
-	}
-	:global(body) {
-		padding: 0;
-		margin: 0;
 	}
 </style>
