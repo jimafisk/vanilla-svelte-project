@@ -1,5 +1,8 @@
 <style>
     nav {
+        position: fixed;
+        width: 100%;
+        background-color: white;
         box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
         height: 50px;
         display: flex;
