@@ -11,6 +11,8 @@
 
 	const shell = [
 		"build/about.js",
+		"about/index.html",
+		"anything/index.html",
 	];
 
 	const ASSETS = `cache${timestamp}`;

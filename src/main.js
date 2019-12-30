@@ -20,6 +20,7 @@ const replaceContainer = function ( Component, options ) {
 	return component;
 }
 
+// Replacing HTML from https://github.com/sveltejs/svelte/issues/537#issuecomment-298229185
 // const app = new App({
   const app = replaceContainer( App, {
 	//target: document.html,
