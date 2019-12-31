@@ -1,42 +1,49 @@
-<script>
-    import Head from './Head.svelte';
-    import Nav from './Nav.svelte';
-	export let name;
-</script>
-
-<html lang="en">
+<html lang="en" id="target">
 	<Head />
 	<body class="hot">
-	<Nav />
-	<main>
-		<h1>Hello {name}!</h1>
-		<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	</main>
+		<Nav {active} />
+		<main>
+			<svelte:component this={Route} {params} />
+		</main>
 	</body>
 </html>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<script>
+	import Navaid from 'navaid';
+	import { onDestroy } from 'svelte';
+	import Nav from './Nav.svelte';
+	import Head from './Head.svelte';
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+	let Route, params, active;
+	let uri = location.pathname;
+	$: active = uri.split('/')[1] || 'home';
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	function draw(m, obj) {
+		params = obj || {};
+		if (m.preload) {
+			m.preload({ params }).then(() => {
+				Route = m.default;
+				window.scrollTo(0, 0);
+			});
+		} else {
+			Route = m.default;
+			window.scrollTo(0, 0);
 		}
 	}
-	:global(body) {
-		padding: 0;
-		margin: 0;
+
+	function track(obj) {
+		uri = obj.state || obj.uri;
+		if (window.ga) ga.send('pageview', { dp:uri });
 	}
-</style>
+
+	addEventListener('replacestate', track);
+	addEventListener('pushstate', track);
+	addEventListener('popstate', track);
+
+	const router = Navaid('/')
+		.on('/', () => import('./routed/Index.svelte').then(draw))
+		.on('/about', () => import('./routed/About.svelte').then(draw))
+		.listen();
+
+	onDestroy(router.unlisten);
+</script>

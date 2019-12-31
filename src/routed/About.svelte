@@ -1,6 +1,6 @@
 <script>
-    import Head from './Head.svelte';
-    import Nav from './Nav.svelte';
+    import Head from '../Head.svelte';
+    import Nav from '../Nav.svelte';
 </script>
 
 <html lang="en">
