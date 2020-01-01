@@ -3,7 +3,7 @@
 <script>
 	import Navaid from 'navaid';
 	import { onDestroy } from 'svelte';
-	import Html from './Html.svelte';
+	import Html from './global/Html.svelte';
 
 	let Route, params, active;
 	let uri = location.pathname;

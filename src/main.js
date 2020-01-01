@@ -1,4 +1,4 @@
-import App from './App.svelte';
+import Router from './Router.svelte';
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/jim-service-worker.js')
@@ -20,10 +20,7 @@ const replaceContainer = function ( Component, options ) {
 	return component;
 }
 
-// Replacing HTML from https://github.com/sveltejs/svelte/issues/537#issuecomment-298229185
-// const app = new App({
-  const app = replaceContainer( App, {
-	//target: document.html,
+const app = replaceContainer( Router, {
 	target: document.querySelector( '#hydrate-plenti' ),
 	props: {}
 });
