@@ -5,9 +5,9 @@
     export let Route, params, name;
 </script>
 
-<html lang="en" id="target">
+<html lang="en">
 	<Head />
-	<body class="hot">
+	<body>
 		<Nav />
 		<main>
 			<svelte:component this={Route} {params} {name} />
