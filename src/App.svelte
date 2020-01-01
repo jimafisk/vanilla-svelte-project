@@ -1,4 +1,4 @@
-<Html {Route} {params} />
+<Html {Route} {params} {active} />
 
 <script>
 	import Navaid from 'navaid';

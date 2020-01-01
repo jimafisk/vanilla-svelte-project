@@ -2,11 +2,11 @@
     import Head from './Head.svelte';
 	import Nav from './Nav.svelte';
 
-    export let Route, params;
+    export let Route, params, active;
 </script>
 
 <html lang="en">
-	<Head title={Route} />
+	<Head title={active} />
 	<body>
 		<Nav />
 		<main>
