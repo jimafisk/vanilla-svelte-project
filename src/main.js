@@ -25,9 +25,7 @@ const replaceContainer = function ( Component, options ) {
   const app = replaceContainer( App, {
 	//target: document.html,
 	target: document.querySelector( '#hydrate-plenti' ),
-	props: {
-		name: 'world'
-	}
+	props: {}
 });
 
 export default app;

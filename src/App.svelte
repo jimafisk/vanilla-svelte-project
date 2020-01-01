@@ -1,11 +1,9 @@
-<Html {Route} {params} {name} />
+<Html {Route} {params} />
 
 <script>
 	import Navaid from 'navaid';
 	import { onDestroy } from 'svelte';
 	import Html from './Html.svelte';
-
-	export let name;
 
 	let Route, params, active;
 	let uri = location.pathname;
