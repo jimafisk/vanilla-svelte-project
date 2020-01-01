@@ -11,6 +11,5 @@
     <title>{ title }</title>
 
     <link rel='icon' type='image/png' href='/favicon.png'>
-    <!-- <link rel='stylesheet' href='/global.css'> -->
     <link rel='stylesheet' href='/build/bundle.css'>
 </head>
