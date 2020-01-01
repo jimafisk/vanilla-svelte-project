@@ -1,8 +1,14 @@
+<script>
+    export let title;
+    console.log('My object : ');
+    console.log(title);
+</script>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width,initial-scale=1'>
 
-    <title>Svelte app</title>
+    <title>{ title }</title>
 
     <link rel='icon' type='image/png' href='/favicon.png'>
     <link rel='stylesheet' href='/global.css'>

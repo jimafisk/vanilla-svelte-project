@@ -1,12 +1,12 @@
 <script>
-	import Nav from './Nav.svelte';
     import Head from './Head.svelte';
+	import Nav from './Nav.svelte';
 
     export let Route, params;
 </script>
 
 <html lang="en">
-	<Head />
+	<Head title={Route} />
 	<body>
 		<Nav />
 		<main>
@@ -20,7 +20,7 @@
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
-		margin: 0 auto;
+		margin: 50px auto 0;
 	}
 	@media (min-width: 640px) {
 		main {
@@ -28,6 +28,8 @@
 		}
 	}
 	:global(body) {
+        --color-primary: #00BCD4;
+
 		padding: 0;
 		margin: 0;
 	}
