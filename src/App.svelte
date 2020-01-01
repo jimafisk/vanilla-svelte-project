@@ -3,7 +3,7 @@
 	<body class="hot">
 		<Nav {active} />
 		<main>
-			<svelte:component this={Route} {params} />
+			<svelte:component this={Route} {params} {name} />
 		</main>
 	</body>
 </html>
@@ -31,6 +31,8 @@
 	import { onDestroy } from 'svelte';
 	import Nav from './Nav.svelte';
 	import Head from './Head.svelte';
+
+	export let name;
 
 	let Route, params, active;
 	let uri = location.pathname;
