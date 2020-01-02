@@ -6,13 +6,9 @@
 	import { onDestroy } from 'svelte';
 	import Html from './global/Html.svelte';
 
-	let Route, params, active;
+	let Route, params, active, content;
 	let uri = location.pathname;
 	$: active = uri.split('/')[1] || 'home';
-
-	let content = Content.get('blog');
-	console.log('content: ');
-	console.log(content);
 
 	function draw(m, obj) {
 		params = obj || {};
@@ -30,6 +26,11 @@
 	function track(obj) {
 		uri = obj.state || obj.uri;
 		if (window.ga) ga.send('pageview', { dp:uri });
+
+		console.log(uri);
+		content = Content.get('blog', uri);
+		console.log('content: ');
+		console.log(content);
 	}
 
 	addEventListener('replacestate', track);

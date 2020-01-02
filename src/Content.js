@@ -1,12 +1,16 @@
 import blog from './content/blog.js';
 
 class Content {
-	constructor(type) {
-		this.type = type;
-	}
-	static get() {
-		const contents = JSON.stringify(blog.map(post => {
-			return post;
+
+	constructor() {}
+
+	static get(type, uri) {
+		const contents = JSON.stringify(blog.map(node => {
+			if (node.hasOwnProperty(uri)) {
+				return node[uri];
+			} else {
+				return;
+			}
 		}));
 		return contents;
 	}

@@ -10,6 +10,12 @@ const blog = [
             "title": "Post 2",
             "description": "Second blog post."
         }
+    },
+    {
+        "/blog/post3": {
+            "title": "Post 3",
+            "description": "Third of the blog posts."
+        }
     }
 ];
 
