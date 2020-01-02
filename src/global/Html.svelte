@@ -2,7 +2,7 @@
     import Head from './Head.svelte';
 	import Nav from './Nav.svelte';
 
-    export let Route, params, active, content;
+    export let Route, params, active, node, allNodes;
 </script>
 
 <html lang="en">
@@ -10,7 +10,7 @@
 	<body>
 		<Nav />
 		<main>
-			<svelte:component this={Route} {params} {active} {content} />
+			<svelte:component this={Route} {params} {active} {node} {allNodes} />
 		</main>
 	</body>
 </html>

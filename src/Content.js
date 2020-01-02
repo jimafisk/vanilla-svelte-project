@@ -4,7 +4,7 @@ class Content {
 
 	constructor() {}
 
-	static get(uri) {
+	static getNode(uri) {
 		let content;
 		JSON.stringify(nodes.map(node => {
 			if (node.hasOwnProperty(uri)) {
@@ -12,6 +12,13 @@ class Content {
 			}
 		}));
 		return content ? content : '';
+	}
+
+	static getAllNodes() {
+		let content = nodes.map(node => {
+			return node;
+		});
+		return content;
 	}
 }
 

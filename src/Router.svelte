@@ -1,4 +1,4 @@
-<Html {Route} {params} {active} {content} />
+<Html {Route} {params} {active} {node} {allNodes} />
 
 <script>
 	import Navaid from 'navaid';
@@ -6,7 +6,7 @@
 	import { onDestroy } from 'svelte';
 	import Html from './global/Html.svelte';
 
-	let Route, params, active, content;
+	let Route, params, active, node, allNodes;
 	let uri = location.pathname;
 	$: active = uri.split('/')[1] || 'home';
 
@@ -23,14 +23,17 @@
 		}
 	}
 
+		allNodes = Content.getAllNodes();
+		console.log('all content: ');
+		console.log(allNodes);
 	function track(obj) {
 		uri = obj.state || obj.uri;
 		if (window.ga) ga.send('pageview', { dp:uri });
 
+		node = Content.getNode(uri);
 		console.log(uri);
-		content = Content.get(uri);
 		console.log('content: ');
-		console.log(content);
+		console.log(node);
 	}
 
 	addEventListener('replacestate', track);

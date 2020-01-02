@@ -1,16 +1,19 @@
 <script>
 	export let name = 'Plenti';
+	export let allNodes;
+	console.log('all nodes:');
+	console.log(allNodes);
 </script>
 
 <section id="intro">
 	<img alt="plenti logo" src="/build/plenti.svg" />
 	<h1>{name}</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<ul>
-		<li><a href="/blog/post1">Post 1</a></li>
-		<li><a href="/blog/post2">Post 2</a></li>
-		<li><a href="/blog/post3">Post 3</a></li>
-	</ul>
+	<h3>All site content:</h3>
+	{#each allNodes as node}
+		<a href="{Object.keys(node)[0]}">{node[Object.keys(node)[0]].title}</a>
+		<br />
+	{/each}
 </section>
 
 <style>
