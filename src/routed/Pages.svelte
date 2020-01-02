@@ -1,5 +1,5 @@
 <script>
-	export let active, node;
+	export let active, node, allNodes;
 </script>
 
 <h1>{active} Page</h1>
@@ -9,3 +9,15 @@
 <strong>Title:</strong><span>{node.title}</span>
 <strong>Desc:</strong><span>{node.description}</span>
 </div>
+
+<h3>All nodes test:</h3>
+{#each allNodes as node}
+	<a href="{Object.keys(node)[0]}">{node[Object.keys(node)[0]].title}</a>
+{/each}
+
+<style>
+	a {
+		display: inline-block;
+		margin: 0 10px;
+	}
+</style>

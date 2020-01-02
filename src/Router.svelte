@@ -10,6 +10,9 @@
 	let uri = location.pathname;
 	$: active = uri.split('/')[1] || 'home';
 
+	node = Content.getNode(uri);
+	allNodes = Content.getAllNodes();
+
 	function draw(m, obj) {
 		params = obj || {};
 		if (m.preload) {
@@ -23,13 +26,12 @@
 		}
 	}
 
-	allNodes = Content.getAllNodes();
-
 	function track(obj) {
 		uri = obj.state || obj.uri;
 		if (window.ga) ga.send('pageview', { dp:uri });
 
 		node = Content.getNode(uri);
+		allNodes = Content.getAllNodes();
 	}
 
 	addEventListener('replacestate', track);
