@@ -6,11 +6,11 @@ class Content {
 
 	static getNode(uri) {
 		let content;
-		JSON.stringify(nodes.map(node => {
+		nodes.map(node => {
 			if (node.hasOwnProperty(uri)) {
 				content = node[uri];
 			}
-		}));
+		});
 		return content ? content : '';
 	}
 

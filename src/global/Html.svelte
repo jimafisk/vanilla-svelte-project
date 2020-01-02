@@ -10,7 +10,7 @@
 	<body>
 		<Nav />
 		<main>
-			<svelte:component this={Route} {params} {active} {node} {allNodes} />
+			<svelte:component this={Route} {params} {active} {...node} {allNodes} />
 		</main>
 	</body>
 </html>

@@ -1,13 +1,14 @@
 <script>
-	export let active, node, allNodes;
+	export let active, allNodes;
+	export let title, description;
 </script>
 
 <h1>{active} Page</h1>
 <p>Pages template</p>
 <a href="/">Back home</a>
 <div>
-<strong>Title:</strong><span>{node.title}</span>
-<strong>Desc:</strong><span>{node.description}</span>
+<strong>Title:</strong><span>{title}</span>
+<strong>Desc:</strong><span>{description}</span>
 </div>
 
 <h3>All nodes test:</h3>
