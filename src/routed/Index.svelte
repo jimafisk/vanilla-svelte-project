@@ -1,8 +1,6 @@
 <script>
 	export let name = 'Plenti';
 	export let allNodes;
-	console.log('all nodes:');
-	console.log(allNodes);
 </script>
 
 <section id="intro">

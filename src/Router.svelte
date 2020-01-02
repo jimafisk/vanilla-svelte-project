@@ -23,17 +23,13 @@
 		}
 	}
 
-		allNodes = Content.getAllNodes();
-		console.log('all content: ');
-		console.log(allNodes);
+	allNodes = Content.getAllNodes();
+
 	function track(obj) {
 		uri = obj.state || obj.uri;
 		if (window.ga) ga.send('pageview', { dp:uri });
 
 		node = Content.getNode(uri);
-		console.log(uri);
-		console.log('content: ');
-		console.log(node);
 	}
 
 	addEventListener('replacestate', track);
