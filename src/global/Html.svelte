@@ -43,9 +43,10 @@
 	}
 	:global(body) {
         --color-primary: #00BCD4;
+        --color-primary-dark: #006775;
 	}
 	:global(a) {
-		color: rgb(0,100,200);
+		color: var(--color-primary-dark);
 		text-decoration: none;
 	}
 
@@ -95,5 +96,8 @@
 
 	:global(button:focus) {
 		border-color: #666;
+	}
+	:global(h1) {
+		margin: 0;
 	}
 </style>
