@@ -1,21 +1,18 @@
-import blog from './content/blog.js';
+import * as content from './content';
 
 class Content {
 
 	constructor() {}
 
 	static get(type, uri) {
-		let content;
-		JSON.stringify(blog.map(node => {
+		let fields;
+		let nodes = content[type];
+		JSON.stringify(nodes.map(node => {
 			if (node.hasOwnProperty(uri)) {
-				content = node[uri];
+				fields = node[uri];
 			}
 		}));
-		if (content) {
-			return content;
-		} else {
-			return '';
-		}
+		return fields ? fields : '';
 	}
 }
 
