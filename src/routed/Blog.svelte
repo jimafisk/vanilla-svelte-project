@@ -2,6 +2,6 @@
 	export let active;
 </script>
 
-<h1>{active} Page</h1>
-<p>Pages template</p>
+<h1>{active} Post</h1>
+<p>Blog post template</p>
 <a href="/">Back home</a>

@@ -33,7 +33,8 @@
 
 	const router = Navaid('/')
 		.on('/', () => import('./routed/Index.svelte').then(draw))
-		.on('/:page', () => import('./routed/Pages.svelte').then(draw))
+		.on('/:slug', () => import('./routed/Pages.svelte').then(draw))
+		.on('/blog/:slug', () => import('./routed/Blog.svelte').then(draw))
 		.listen();
 
 	onDestroy(router.unlisten);
