@@ -6,4 +6,7 @@
 <h1>{active} Post</h1>
 <p>Blog post template</p>
 <a href="/">Back home</a>
-<strong>{content}</strong>
+<div>
+	<strong>Title: </strong><span>{content.title}</span>
+	<strong>Desc: </strong><span>{content.description}</span>
+</div>

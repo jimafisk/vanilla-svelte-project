@@ -5,14 +5,17 @@ class Content {
 	constructor() {}
 
 	static get(type, uri) {
-		const contents = JSON.stringify(blog.map(node => {
+		let content;
+		JSON.stringify(blog.map(node => {
 			if (node.hasOwnProperty(uri)) {
-				return node[uri];
-			} else {
-				return;
+				content = node[uri];
 			}
 		}));
-		return contents;
+		if (content) {
+			return content;
+		} else {
+			return '';
+		}
 	}
 }
 
