@@ -10,7 +10,7 @@
 	<body>
 		<Nav />
 		<main>
-			<svelte:component this={Route} {params} />
+			<svelte:component this={Route} {params} {active} />
 		</main>
 	</body>
 </html>
