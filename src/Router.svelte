@@ -28,7 +28,7 @@
 		if (window.ga) ga.send('pageview', { dp:uri });
 
 		console.log(uri);
-		content = Content.get('blog', uri);
+		content = Content.get(uri);
 		console.log('content: ');
 		console.log(content);
 	}

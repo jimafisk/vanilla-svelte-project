@@ -1,4 +1,4 @@
-const blog = [
+const content = [
     {
         "/blog/post1": {
             "title": "Post 1",
@@ -16,7 +16,19 @@ const blog = [
             "title": "Post 3",
             "description": "Third of the blog posts."
         }
+    },
+    {
+        "/about": {
+            "title": "About Page",
+            "description": "This is the about page"
+        }
+    },
+    {
+        "/anything": {
+            "title": "Anything!",
+            "description": "The amazing anything page..."
+        }
     }
 ];
 
-export default blog;
+export default content;
