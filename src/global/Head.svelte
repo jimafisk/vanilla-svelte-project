@@ -1,7 +1,5 @@
 <script>
     export let title;
-    console.log('My object : ');
-    console.log(title);
 </script>
 
 <head>

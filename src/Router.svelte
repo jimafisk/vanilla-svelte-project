@@ -1,13 +1,18 @@
-<Html {Route} {params} {active} />
+<Html {Route} {params} {active} {content} />
 
 <script>
 	import Navaid from 'navaid';
+	import Content from './Content.js';
 	import { onDestroy } from 'svelte';
 	import Html from './global/Html.svelte';
 
 	let Route, params, active;
 	let uri = location.pathname;
 	$: active = uri.split('/')[1] || 'home';
+
+	let content = Content.get('blog');
+	console.log('content: ');
+	console.log(content);
 
 	function draw(m, obj) {
 		params = obj || {};
