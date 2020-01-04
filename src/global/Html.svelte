@@ -2,15 +2,15 @@
     import Head from './Head.svelte';
 	import Nav from './Nav.svelte';
 
-    export let Route, params, active, node, allNodes;
+	export let Route, params, active, node, allNodes;
 </script>
 
 <html lang="en">
-	<Head title={active} />
+	<Head title={node.filename} />
 	<body>
 		<Nav />
 		<main>
-			<svelte:component this={Route} {params} {active} {...node} {allNodes} />
+			<svelte:component this={Route} {params} {active} {...node.fields} {allNodes} />
 		</main>
 	</body>
 </html>

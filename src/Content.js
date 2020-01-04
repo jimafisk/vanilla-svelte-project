@@ -8,7 +8,7 @@ class Content {
 		let content;
 		nodes.map(node => {
 			if (node.path == uri) {
-				content = node.fields;
+				content = node;
 			}
 		});
 		return content ? content : '';
