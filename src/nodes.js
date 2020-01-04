@@ -20,7 +20,7 @@ const content = [
     {
         "path": "/blog/post3",
         "type": "blog",
-        "filename": "post3.json",
+        "filename": "post-3_has_a_long_filename.json",
         "fields": {
             "title": "Post 3",
             "description": "Third of the blog posts."
