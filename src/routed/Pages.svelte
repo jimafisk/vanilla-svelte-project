@@ -13,7 +13,7 @@
 
 <h3>All nodes test:</h3>
 {#each allNodes as node}
-	<a href="{Object.keys(node)[0]}">{node[Object.keys(node)[0]].title}</a>
+	<a href="{node.path}">{node.fields.title}</a>
 {/each}
 
 <style>

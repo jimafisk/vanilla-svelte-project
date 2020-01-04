@@ -7,10 +7,12 @@
 	<img alt="plenti logo" src="/build/plenti.svg" />
 	<h1>{name}</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<h3>All site content:</h3>
+	<h3>Recent blog posts:</h3>
 	{#each allNodes as node}
-		<a href="{Object.keys(node)[0]}">{node[Object.keys(node)[0]].title}</a>
-		<br />
+		{#if node.type == 'blog'}
+			<a href="{node.path}">{node.fields.title}</a>
+			<br />
+		{/if}
 	{/each}
 </section>
 

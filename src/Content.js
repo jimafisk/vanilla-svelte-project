@@ -7,8 +7,8 @@ class Content {
 	static getNode(uri) {
 		let content;
 		nodes.map(node => {
-			if (node.hasOwnProperty(uri)) {
-				content = node[uri];
+			if (node.path == uri) {
+				content = node.fields;
 			}
 		});
 		return content ? content : '';
