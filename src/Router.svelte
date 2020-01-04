@@ -1,4 +1,4 @@
-<Html {Route} {params} {active} {node} {allNodes} />
+<Html {Route} {params} {node} {allNodes} />
 
 <script>
 	import Navaid from 'navaid';
@@ -6,10 +6,9 @@
 	import { onDestroy } from 'svelte';
 	import Html from './global/Html.svelte';
 
-	let Route, params, active, node, allNodes;
-	let uri = location.pathname;
-	$: active = uri.split('/')[1] || 'home';
+	let Route, params, node, allNodes;
 
+	let uri = location.pathname;
 	node = Content.getNode(uri);
 	allNodes = Content.getAllNodes();
 
