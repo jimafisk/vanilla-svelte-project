@@ -1,4 +1,4 @@
-<Html {Route} {params} {node} {allNodes} />
+<Html {Route} {node} {allNodes} />
 
 <script>
 	import Navaid from 'navaid';
@@ -6,23 +6,15 @@
 	import { onDestroy } from 'svelte';
 	import Html from './global/Html.svelte';
 
-	let Route, params, node, allNodes;
+	let Route, node, allNodes;
 
 	let uri = location.pathname;
 	node = Content.getNode(uri);
 	allNodes = Content.getAllNodes();
 
-	function draw(m, obj) {
-		params = obj || {};
-		if (m.preload) {
-			m.preload({ params }).then(() => {
-				Route = m.default;
-				window.scrollTo(0, 0);
-			});
-		} else {
-			Route = m.default;
-			window.scrollTo(0, 0);
-		}
+	function draw(m) {
+		Route = m.default;
+		window.scrollTo(0, 0);
 	}
 
 	function track(obj) {

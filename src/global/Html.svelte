@@ -2,7 +2,7 @@
     import Head from './Head.svelte';
 	import Nav from './Nav.svelte';
 
-	export let Route, params, node, allNodes;
+	export let Route, node, allNodes;
 
     const makeTitle = filename => {
 		if (filename == '_index.json') {
@@ -24,7 +24,7 @@
 	<body>
 		<Nav />
 		<main>
-			<svelte:component this={Route} {params} {...node.fields} {allNodes} />
+			<svelte:component this={Route} {...node.fields} {allNodes} />
 		</main>
 	</body>
 </html>
