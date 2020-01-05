@@ -5,7 +5,9 @@
 	export let Route, params, node, allNodes;
 
     const makeTitle = filename => {
-		if (filename) {
+		if (filename == '_index.json') {
+			return 'Home';
+		} else if (filename) {
 			// Remove file extension.
 			filename = filename.split('.').slice(0, -1).join('.');
 			// Convert underscores and hyphens to spaces.

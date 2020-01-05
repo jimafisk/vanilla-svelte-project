@@ -43,6 +43,14 @@ const content = [
             "title": "Anything!",
             "description": "The amazing anything page..."
         }
+    },
+    {
+        "path": "/",
+        "type": "",
+        "filename": "_index.json",
+        "fields": {
+            "name": "Plenti"
+        }
     }
 ];
 

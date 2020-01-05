@@ -1,5 +1,5 @@
 <script>
-	export let name = 'Plenti';
+	export let name;
 	export let allNodes;
 </script>
 
